@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <Header>
+        <nav>
+            <div class="contentIcon">
+                <img src="../static/img/tecnomarketpngicono.png" alt="tecno market">
+            </div>
+            <div class="contentNav">
+                <p><a href="{% url 'home' %}">inicio</a></p>
+                <p><a href="{% url 'galeria' %}">galeria</a></p>
+                <p><a href="{% url 'contacto' %}">contacto</a></p>
+            </div>
+        </nav>
+    </Header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div>
+            <div>
+                <img src="../static/img/footer/apple.png" alt="">
+            </div>
+            <div>
+                <img src="../static/img/footer/lenovo.png" alt="">
+            </div>
+            <div>
+                <img src="../static/img/footer/microsoft.png" alt="">
+            </div>
+            <div>
+                <img src="../static/img/footer/samsung.png" alt="">
+            </div>
+            <div>
+                <img src="../static/img/footer/xiaomi.png" alt="">
+            </div>
+        </div>
+        <p>©copyrigth tecno maket sena 2022 </p>
+    </footer>
+</body>
+</html>

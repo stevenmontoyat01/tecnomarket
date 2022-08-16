@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<main class="mainHome">
+    <b><h1>PRODUCTOS</h1></b>
+    <div class="contentProducts">
+        {% for p in products %}
+        <div class="cards">
+            <div class="contentImg">
+                {% if p.image %}
+                <img src='{{ p.image.url }}' alt='{{p.id}}'>
+                {% endif %}
+            </div>
+            <div>
+                <div class="contentParrf">
+                    <b><p class="parrf">producto:</p></b><p>{{p.name}}</p>
+                </div>
+                <div class="contentParrf">
+                    <b><p class="parrf">marca:</p></b><p>{{p.brand}}</p>
+                </div>
+                <div class="contentParrf">
+                    <b><p class="parrf">tipo:</p></b><p>{{p.type_product}}</p>
+                </div>
+                <div class="contentParrf">
+                    <b><p class="parrf">precio:</p></b><p>${{p.price}}</p>
+                </div>
+                <div class="contentParrf">
+                    <b><p class="parrf">unidades:</p></b><p>{{p.units}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
+

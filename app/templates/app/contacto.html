@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+contacto
+{% endblock %}
+
+{% block content %}
+<main class="mainContact">
+    <form class="contentInfo">
+        <h1>contacto</h1>
+        <b><p>Nombre:</p></b>
+        <div>
+            <input type="text" placeholder="ingrese nombre">
+            <hr>
+        </div>
+        <b><p>Email:</p></b>
+        <div>
+            <input type="text" placeholder="ingrese email">
+            <hr>
+        </div>
+        <b><p>Telefono:</p></b>
+        <div>
+            <input type="text" placeholder="ingrese telefono">
+            <hr>
+        </div>
+        <b><p>Tipo de consulta:</p></b>
+        <select name="" id="">
+            <option value="---">---</option>
+        </select>
+        <b><p>Mensaje:</p></b>
+        <div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="ingrese mensaje"></textarea>
+        </div>
+        <label for="question"><p><input type="checkbox" class="inputCheck" id="question">¿Desea resivir promociones / avisos a su email?</p></label>
+        <button class="buttonCheck">enviar</button>
+    </form>
+</main>
+{% endblock %}
+
+
